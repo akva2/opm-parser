@@ -5,8 +5,7 @@ Build-Depends: build-essential, debhelper (>= 9), pkg-config, libopm-common-dev,
                cmake, libtinyxml-dev, bc, libboost-filesystem-dev, zlib1g-dev,
                libert.ecl-dev, git, libtool, doxygen, libboost-date-time-dev,
                texlive-latex-extra, texlive-latex-recommended, ghostscript,
-               libboost-system-dev, libboost-test-dev, libboost-regex-dev,
-               python-ert.ecl, python-cwrap
+               libboost-system-dev, libboost-test-dev, libboost-regex-dev
 Standards-Version: 3.9.2
 Section: libs
 Homepage: http://opm-project.org
@@ -79,12 +78,3 @@ Multi-Arch: foreign
 Provides: libopm-cparser-dbg
 Depends: libopm-cparser1 (= ${binary:Version}), ${misc:Depends}
 Description: OPM parser c wrapping library -- debug symbols
-
-Package: python-opm-parser
-Section: python
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, python-ert.ecl,
-         python-cwrap, libopm-cparser
-Description: OPM parser library -- python bindings
- The OPM parser library is the eclipse parser library within OPM
- of reservoir models. This package contains the python bindings.
